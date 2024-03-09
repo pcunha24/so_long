@@ -6,7 +6,7 @@
 /*   By: pedalexa <pedalexa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:48:00 by pedalexa          #+#    #+#             */
-/*   Updated: 2024/01/25 19:36:05 by pedalexa         ###   ########.fr       */
+/*   Updated: 2024/03/09 15:12:48 by pedalexa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	move_up(t_game *game)
 	&& game -> n_coll == 0)
 	{
 		mlx_clear_window(game -> mlx, game -> win);
-		game -> n_moves++;
+		print_moves(game);
 		game -> endgame = 1;
 		draw_map(game);
 	}
@@ -29,7 +29,7 @@ void	move_up(t_game *game)
 	else
 	{
 		mlx_clear_window(game -> mlx, game -> win);
-		game -> n_moves++;
+		print_moves(game);
 		if (game -> map[game -> y_player][game -> x_player] == 'C')
 			game -> n_coll--;
 		game -> map[game -> y_player][game -> x_player] = 'P';
@@ -44,7 +44,7 @@ void	move_down(t_game *game)
 	&& game -> n_coll == 0)
 	{
 		mlx_clear_window(game -> mlx, game -> win);
-		game -> n_moves++;
+		print_moves(game);
 		game -> endgame = 1;
 		draw_map(game);
 	}
@@ -55,7 +55,7 @@ void	move_down(t_game *game)
 	else
 	{
 		mlx_clear_window(game -> mlx, game -> win);
-		game -> n_moves++;
+		print_moves(game);
 		if (game -> map[game -> y_player][game -> x_player] == 'C')
 			game -> n_coll--;
 		game -> map[game -> y_player][game -> x_player] = 'P';
@@ -70,7 +70,7 @@ void	move_left(t_game *game)
 	&& game -> n_coll == 0)
 	{
 		mlx_clear_window(game -> mlx, game -> win);
-		game -> n_moves++;
+		print_moves(game);
 		game -> endgame = 1;
 		draw_map(game);
 	}
@@ -81,7 +81,7 @@ void	move_left(t_game *game)
 	else
 	{
 		mlx_clear_window(game -> mlx, game -> win);
-		game -> n_moves++;
+		print_moves(game);
 		if (game -> map[game -> y_player][game -> x_player] == 'C')
 			game -> n_coll--;
 		game -> map[game -> y_player][game -> x_player] = 'P';
@@ -96,7 +96,7 @@ void	move_right(t_game *game)
 	&& game -> n_coll == 0)
 	{
 		mlx_clear_window(game -> mlx, game -> win);
-		game -> n_moves++;
+		print_moves(game);
 		game -> endgame = 1;
 		draw_map(game);
 	}
@@ -107,7 +107,7 @@ void	move_right(t_game *game)
 	else
 	{
 		mlx_clear_window(game -> mlx, game -> win);
-		game -> n_moves++;
+		print_moves(game);
 		if (game -> map[game -> y_player][game -> x_player] == 'C')
 			game -> n_coll--;
 		game -> map[game -> y_player][game -> x_player] = 'P';

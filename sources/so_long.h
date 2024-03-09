@@ -6,7 +6,7 @@
 /*   By: pedalexa <pedalexa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:47:54 by pedalexa          #+#    #+#             */
-/*   Updated: 2024/02/21 15:33:28 by pedalexa         ###   ########.fr       */
+/*   Updated: 2024/03/09 15:16:57 by pedalexa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ int		is_ber(char *map_file);
 void	free_map(char **map);
 int		path_check(t_game *game, char *path);
 void	error_messages(char *message);
+void	print_moves(t_game *game);
 
 #endif
