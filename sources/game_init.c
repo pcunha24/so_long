@@ -6,7 +6,7 @@
 /*   By: pedalexa <pedalexa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:47:29 by pedalexa          #+#    #+#             */
-/*   Updated: 2024/01/25 16:31:59 by pedalexa         ###   ########.fr       */
+/*   Updated: 2024/03/10 12:47:33 by pedalexa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	game_init(t_game *game)
 	game -> mlx = mlx_init();
 	game -> win = mlx_new_window
 		(game -> mlx, game -> win_width, game -> win_height, "so_long");
-	game -> n_moves = 0;
+	game -> n_moves = 1;
 	game -> endgame = 0;
 	get_images(game);
 	draw_map(game);
